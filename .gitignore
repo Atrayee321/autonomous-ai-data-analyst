@@ -1,0 +1,33 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Python / virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# Local data / output
+data/
+uploads/
+output/
+reports/generated/
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
