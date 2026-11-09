@@ -6,11 +6,9 @@
 
 **An intelligent, dataset-independent AI-powered analytics application.**
 
+🌐 **Live App:** [Autonomous AI Data Analyst](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)
+
 Upload datasets • Explore insights • Ask questions • Generate reports
-
-[![Launch Live App](https://img.shields.io/badge/🚀_Launch_Live_App-Streamlit-FF4B4B?style=for-the-badge)](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)
-
-**🌐 [Try the Live Application](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)**
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
@@ -18,7 +16,7 @@ Upload datasets • Explore insights • Ask questions • Generate reports
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_AI-purple)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?logo=pandas&logoColor=white)
 
-**[Live Demo](#-live-demo) • [Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-getting-started) • [Deployment](#-deployment)**
+**[Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-getting-started) • [Deployment](#-deployment)**
 
 </div>
 
@@ -33,18 +31,6 @@ Built using **Google Gemini, LangGraph, Pandas, Plotly, and Streamlit**, the app
 Instead of manually writing analytical code for every question, users can upload a dataset and let the AI plan appropriate analyses or answer questions about the data.
 
 > **Project Status:** Functional prototype under development. AI-generated explanations should be verified before making important decisions.
-
----
-
-## 🌐 Live Demo
-
-Experience the Autonomous AI Data Analyst through the deployed Streamlit application.
-
-### 🚀 [Launch Autonomous AI Data Analyst](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)
-
-> **Note:** Access to the application depends on its Streamlit sharing settings. The application uses Gemini API quotas, so availability may vary.
-
----
 
 ## 🚀 Key Features
 
@@ -182,100 +168,6 @@ autonomous-ai-data-analyst/
 
 The Jupyter notebook contains the original Google Colab development experiments. The Streamlit application uses the separate Python modules.
 
----
-
-## ⚙️ Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Atrayee321/autonomous-ai-data-analyst.git
-cd autonomous-ai-data-analyst
-```
-
-The repository is private, so GitHub access is required.
-
-### 2. Create a Virtual Environment
-
-```bash
-python -m venv .venv
-```
-
-Activate the environment:
-
-**Windows**
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-**macOS / Linux**
-
-```bash
-source .venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Configure Gemini API
-
-Obtain an API key from [Google AI Studio](https://aistudio.google.com/apikey).
-
-Create a local `.streamlit/secrets.toml` file:
-
-```toml
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
-```
-
-> 🔐 Never commit actual API keys to GitHub.
-
-### 5. Run the Application
-
-```bash
-streamlit run app.py
-```
-
-Upload a CSV or Excel dataset and select your preferred analysis mode.
-
----
-
-## ☁️ Deployment
-
-The application is deployed using **Streamlit Community Cloud**.
-
-**Live App:** [Autonomous AI Data Analyst](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)
-
-To deploy your own instance:
-
-1. Log in to [Streamlit Community Cloud](https://share.streamlit.io/).
-2. Connect your GitHub account and authorize repository access.
-3. Select the repository containing the application.
-4. Choose the `main` branch.
-5. Set the main file path to `app.py`.
-6. Add `GEMINI_API_KEY` under **App Settings → Secrets**.
-7. Deploy and test both analysis modes.
-
-**Security:** Keep API credentials in Streamlit Secrets and configure app-sharing permissions separately from repository visibility.
-
----
-
-## 🧪 Testing
-
-Run the basic analytical tool tests using:
-
-```bash
-pip install pytest
-pytest -q
-```
-
-These tests cover selected Python analytical operations. End-to-end application and AI-response validation are still being developed.
-
----
-
 ## ⚠️ Current Limitations
 
 - Designed for general-purpose tabular data, not every file type or analytical task.
@@ -317,8 +209,6 @@ To make data analysis more accessible by creating an intelligent AI assistant th
 ### ⭐ Built with Python, Gemini, LangGraph & Streamlit
 
 **Turning data into insights, one question at a time.**
-
-### 🚀 [Try the Live App](https://autonomous-ai-data-analyst-kmbpc8frppj6wdhroqziof.streamlit.app/)
 
 </div>
 
