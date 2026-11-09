@@ -51,22 +51,22 @@ def load_dataset(file) -> pd.DataFrame:
     return data
 
 
-def show_chart(df: pd.DataFrame, spec: tuple[str, str, str] | None) -> None:
+def show_chart(df: pd.DataFrame, spec: tuple[str, str, str, str] | None) -> None:
     if not spec:
         return
-    chart_type, x, y = spec
+    chart_type, x, y, operation = spec
     if x not in df or y not in df or not pd.api.types.is_numeric_dtype(df[y]):
         return
     try:
         if chart_type == "bar":
-            grouped = df.groupby(x, dropna=False)[y].sum().nlargest(20).reset_index()
-            fig = px.bar(grouped, x=x, y=y, title=f"Total {y} by {x}")
+            grouped = df.groupby(x, dropna=False)[y].agg(operation).nlargest(20).reset_index()
+            fig = px.bar(grouped, x=x, y=y, title=f"{operation.title()} of {y} by {x}")
         elif chart_type == "line":
             dates = pd.to_datetime(df[x], errors="coerce", format="mixed")
             view = pd.DataFrame({"date": dates, y: df[y]}).dropna(subset=["date"])
             if view.empty:
                 return
-            grouped = view.groupby("date", as_index=False)[y].sum().sort_values("date")
+            grouped = view.groupby("date", as_index=False)[y].agg(operation).sort_values("date")
             fig = px.line(grouped, x="date", y=y, title=f"{y} over time")
         else:
             return
