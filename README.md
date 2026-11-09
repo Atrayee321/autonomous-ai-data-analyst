@@ -210,11 +210,4 @@ To make data analysis more accessible by creating an intelligent AI assistant th
 
 **Turning data into insights, one question at a time.**
 
-</div>
-
-### ⭐ Built with Python, Gemini, LangGraph & Streamlit
-
-**Turning data into insights, one question at a time.**
-
-</div>
 
