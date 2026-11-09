@@ -218,15 +218,15 @@ def explain(client: genai.Client, question: str, results: list[dict], report: bo
     return response.text or "The model returned no answer."
 
 
-def suggest_chart(results: list[dict]) -> tuple[str, str, str] | None:
+def suggest_chart(results: list[dict]) -> tuple[str, str, str, str] | None:
     for item in results:
         if item.get("result", {}).get("status") != "success":
             continue
         r = item["result"]
         if item.get("tool") == "grouped_analysis":
-            return ("bar", r["category_col"], r["numeric_col"])
+            return ("bar", r["category_col"], r["numeric_col"], r["operation"])
         if item.get("tool") == "time_series":
-            return ("line", r["date_col"], r["numeric_col"])
+            return ("line", r["date_col"], r["numeric_col"], r["operation"])
     return None
 
 
